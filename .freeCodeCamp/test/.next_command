@@ -54,3 +54,14 @@ chmod +x insert_data.sh
 psql --username=freecodecamp --dbname=postgres
 chmod +x queries.sh
 ./queries.sh
+pg_dump -cC --inserts --username=freecodecamp worldcup > worldcup.sql
+git init
+git commit -m "Uploaded worldcup.sql, insert_data.sh, and queries.sh"
+git add worldcup.sql
+git add .
+git branch -M main
+git remote add origin https://github.com/Shakespro/worldcup.git
+git remote -v
+git remote set-url origin https://github.com/Shakespro/worldcup.git
+git remote -v
+git add .
